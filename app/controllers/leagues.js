@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 
 exports.create = function (req, res) {
   var league = new League(req.body)
-  leage.commissioner = req.user
+  league.commissioner = req.user
   league.save()
   res.jsonp(league)
 }
