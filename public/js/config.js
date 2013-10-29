@@ -29,6 +29,22 @@ window.app.config(['$routeProvider', function($routeProvider) {
   { 
     templateUrl: 'views/leagues/view.html' 
   })
+  .when('/fantasyteams', 
+  {
+    templateUrl: 'views/fantasyteams/list.html'
+  })
+  .when('/fantasyteams/create', 
+  { 
+    templateUrl: 'views/fantasyteams/create.html' 
+  })  
+  .when('/fantasyteams/:fantasyTeamId/edit', 
+  { 
+    templateUrl: 'views/fantasyteams/edit.html' 
+  })
+  .when('/fantasyteams/:fantasyTeamId', 
+  { 
+    templateUrl: 'views/fantasyteams/view.html' 
+  })
   .otherwise({redirectTo: '/'});
 }]);
 
